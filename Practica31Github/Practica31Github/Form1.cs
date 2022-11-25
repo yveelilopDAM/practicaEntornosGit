@@ -9,7 +9,8 @@ namespace Practica31Github
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            //rama usuario 2 Andres. Efectua cambios en el codigo
+
             string textoTelegrama;
             char tipoTelegrama = ' ';
             int numPalabras = 0;
