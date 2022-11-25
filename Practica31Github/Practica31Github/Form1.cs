@@ -9,8 +9,7 @@ namespace Practica31Github
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //prueba de commit
-            //prueba 2 de commit desde un usuario distinto
+            
             string textoTelegrama;
             char tipoTelegrama = ' ';
             int numPalabras = 0;
