@@ -17,7 +17,10 @@ namespace Practica31Github
             //Leo el telegrama
             textoTelegrama = txtTelegrama.Text;
             // telegrama urgente?
-            if (cbUrgente.Checked)
+            if (radioButton1.Checked)
+                tipoTelegrama = 'o';
+
+            if (radioButton2.Checked)
                 tipoTelegrama = 'u';
             //Obtengo el número de palabras que forma el telegrama
             numPalabras = textoTelegrama.Length;
@@ -37,6 +40,22 @@ namespace Practica31Github
             else
                 coste = 0;
             txtPrecio.Text = coste.ToString() + " euros";
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     
