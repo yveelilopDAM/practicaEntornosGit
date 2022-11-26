@@ -9,8 +9,7 @@ namespace Practica31Github
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //rama usuario 2 Andres. Efectua cambios en el codigo
-
+            //Este es el codigo que hace Andres. El programa funciona ahora correctamente.
             string textoTelegrama;
             char tipoTelegrama = ' ';
             int numPalabras = 0;
@@ -20,14 +19,29 @@ namespace Practica31Github
             // telegrama urgente?
             if (cbUrgente.Checked)
                 tipoTelegrama = 'u';
+            else
+                tipoTelegrama = 'o';
             //Obtengo el número de palabras que forma el telegrama
-            numPalabras = textoTelegrama.Length;
+            //numPalabras = textoTelegrama.Length;
+
+
+
+            foreach (char c in textoTelegrama)
+            {
+                if (c == ' ')
+                    numPalabras += 1;
+                else if (c == '.')
+                    numPalabras += 1;
+                else if (c == ',')
+                    numPalabras += 1;
+            }
+
             //Si el telegrama es ordinario
             if (tipoTelegrama == 'o')
                 if (numPalabras <= 10)
-                    coste = 25;
+                    coste = 2.5;
                 else
-                    coste = 0.5 * numPalabras;
+                    coste = 2.5 + (0.5 * (numPalabras - 10));
             else
             //Si el telegrama es urgente
             if (tipoTelegrama == 'u')
